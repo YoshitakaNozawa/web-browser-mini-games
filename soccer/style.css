@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column; /* タイトルとゲームエリアを縦に並べる */
+}
+
+#game-area {
+    border: 1px solid black; /* 仮の境界線 */
+    width: 80vw; /* ビューポート幅の80% */
+    max-width: 600px; /* 最大幅 */
+    height: 60vh; /* ビューポート高さの60% */
+    max-height: 400px; /* 最大高さ */
+    background-color: lightgreen; /* 仮の背景色 */
+}
+
+#gameCanvas {
+    border: 1px solid black;
+    width: 80vw; /* ビューポート幅の80% */
+    max-width: 600px; /* 最大幅 */
+    height: 60vh; /* ビューポート高さの60% */
+    max-height: 400px; /* 最大高さ */
+    /* background-color: lightgreen; 仮の背景色を削除 */
+}
+
+#score-board {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* スマートフォン向けスタイル */
+@media (max-width: 600px) {
+    #game-area {
+        width: 95vw;
+        height: 70vh;
+    }
+}
+
+/* --- Virtual Joystick Styles --- */
+#joystick-base {
+    position: absolute; /* または fixed */
+    bottom: 30px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(128, 128, 128, 0.5); /* 半透明グレー */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Initially hidden, shown by JS on touch devices if needed */
+    /* display: none; */
+}
+
+#joystick-handle {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(80, 80, 80, 0.7); /* 少し濃いグレー */
+    border-radius: 50%;
+    position: absolute; /* Base基準で動かすため */
+}
+
+/* --- Screen Overlays --- */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
+    color: white;
+    text-align: center;
+    z-index: 10; /* CanvasやJoystickより手前に */
+}
+
+.screen h2 {
+    margin-bottom: 20px;
+}
+
+.screen button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}

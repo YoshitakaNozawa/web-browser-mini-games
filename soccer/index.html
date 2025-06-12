@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サッカーミニゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>サッカーミニゲーム</h1>
+    <div id="score-board">Score: <span id="score">0</span></div>
+    <!-- ゲーム表示領域 (後で Canvas に置き換える) -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Screens (Overlays) -->
+    <div id="start-screen" class="screen">
+        <h2>Simple Soccer</h2>
+        <button id="start-button">Start Game</button>
+    </div>
+    <div id="game-over-screen" class="screen" style="display: none;">
+        <h2>Game Over</h2>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <button id="restart-button">Restart</button>
+    </div>
+
+    <div id="joystick-base">
+        <div id="joystick-handle"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
