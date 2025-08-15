@@ -279,6 +279,33 @@ class Game {
             if (e.key === 'Right' || e.key === 'ArrowRight') this.player.rightPressed = false;
             if (e.key === 'Left' || e.key === 'ArrowLeft') this.player.leftPressed = false;
         });
+
+        // ----- スマートフォン/タッチ操作のサポートを追加 -----
+        const handleTouch = (e) => {
+            e.preventDefault(); // 画面のスクロールを防ぐ
+            const touchX = e.touches[0].clientX;
+            const canvasRect = this.canvas.getBoundingClientRect();
+            const canvasMidX = canvasRect.left + canvasRect.width / 2;
+
+            if (touchX < canvasMidX) {
+                this.player.leftPressed = true;
+                this.player.rightPressed = false;
+            } else {
+                this.player.rightPressed = true;
+                this.player.leftPressed = false;
+            }
+        };
+
+        const handleTouchEnd = (e) => {
+            e.preventDefault();
+            this.player.leftPressed = false;
+            this.player.rightPressed = false;
+        };
+
+        this.canvas.addEventListener('touchstart', handleTouch, { passive: false });
+        this.canvas.addEventListener('touchmove', handleTouch, { passive: false });
+        this.canvas.addEventListener('touchend', handleTouchEnd);
+        this.canvas.addEventListener('touchcancel', handleTouchEnd);
     }
 
     /**

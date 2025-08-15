@@ -68,3 +68,38 @@ canvas {
 .flash {
     background-color: #ffdddd; /* 少し柔らかい赤に */
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    #game-container {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #game-info {
+        font-size: 1.2em;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    #game-info span {
+        margin: 0 5px;
+        padding: 8px 10px;
+        min-width: 80px;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}
