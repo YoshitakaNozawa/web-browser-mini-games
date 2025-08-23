@@ -16,8 +16,8 @@ body {
 }
 
 h1 {
-    color: #1C1E21; /* 濃いめの見出し色 */
-    font-size: 3em;
+    color: #1900ff; /* 濃いめの見出し色 */
+    font-size: 4em;
     font-weight: 600;
     margin-bottom: 20px;
     letter-spacing: 1.5px;
@@ -25,13 +25,13 @@ h1 {
 }
 
 #game-container {
-    background: rgba(255, 255, 255, 0.7); /* 明るい半透明のコンテナ */
+    background: rgb(255, 238, 0); /* 明るい半透明のコンテナ */
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* 影を柔らかく */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.05); /* 境界線を繊細に */
+    border: 5px solid rgba(93, 45, 226, 0.76); /* 境界線を繊細に */
     margin-bottom: 20px;
 }
 
@@ -44,8 +44,8 @@ h1 {
 #game-info span {
     margin: 0 20px;
     padding: 8px 15px;
-    background-color: #FFFFFF; /* クリーンな白 */
-    color: #333; /* テキスト色を親要素から継承 */
+    background-color: #ff8902; /* クリーンな白 */
+    color: #04fd19; /* テキスト色を親要素から継承 */
     border-radius: 8px;
     display: inline-block;
     min-width: 100px;
@@ -66,7 +66,7 @@ canvas {
 
 /* ダメージを受けた際のフラッシュ効果 */
 .flash {
-    background-color: #ffdddd; /* 少し柔らかい赤に */
+    background-color: #fa0303; /* 少し柔らかい赤に */
 }
 
 @media (max-width: 768px) {

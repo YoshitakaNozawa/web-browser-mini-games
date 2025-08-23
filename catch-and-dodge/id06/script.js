@@ -19,7 +19,7 @@
  */
 const ASSET_PATHS = {
     player: 'images/player.png',
-    apple: 'images/apple.png',
+    apple: 'images/star.png',
     bomb: 'images/bomb.png',
 };
 
@@ -42,7 +42,7 @@ const CONFIG = {
     },
     /** ゲーム全体に関する設定 */
     game: {
-        initialLife: 3, // ゲーム開始時のライフ
+        initialLife: 1, // ゲーム開始時のライフ
     },
 };
 
@@ -413,7 +413,7 @@ class Game {
         this.ctx.font = '48px sans-serif';
         this.ctx.fillStyle = 'red';
         this.ctx.textAlign = 'center';
-        this.ctx.fillText('GAME OVER', this.canvas.width / 2, this.canvas.height / 2);
+        this.ctx.fillText('Good job!', this.canvas.width / 2, this.canvas.height / 2);
     }
 }
 

@@ -3,8 +3,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #F0F2F5; /* 明るいグレーブルー */
-    color: #333; /* ダークグレーのテキスト */
+    background-color: #0a0a0a; /* 明るいグレーブルー */
+    color: #f5870a; /* ダークグレーのテキスト */
     margin: 0;
     padding: 20px;
     display: flex;
@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    color: #1C1E21; /* 濃いめの見出し色 */
+    color: #c64646; /* 濃いめの見出し色 */
     font-size: 3em;
     font-weight: 600;
     margin-bottom: 20px;
@@ -25,13 +25,13 @@ h1 {
 }
 
 #game-container {
-    background: rgba(255, 255, 255, 0.7); /* 明るい半透明のコンテナ */
+    background: rgba(87, 87, 82, 0.7); /* 明るい半透明のコンテナ */
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* 影を柔らかく */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.05); /* 境界線を繊細に */
+    border: 10px solid rgba(116, 116, 116, 0.05); /* 境界線を繊細に */
     margin-bottom: 20px;
 }
 
@@ -42,11 +42,11 @@ h1 {
 }
 
 #game-info span {
-    margin: 0 20px;
-    padding: 8px 15px;
-    background-color: #FFFFFF; /* クリーンな白 */
-    color: #333; /* テキスト色を親要素から継承 */
-    border-radius: 8px;
+    margin: 0 40px;
+    padding: 5px 15px;
+    background-color: #000000; /* クリーンな白 */
+    color: #20f00d; /* テキスト色を親要素から継承 */
+    border-radius: 10px;
     display: inline-block;
     min-width: 100px;
     transition: all 0.3s ease;
@@ -59,14 +59,14 @@ h1 {
 }
 
 canvas {
-    background-color: #FFFFFF; /* キャンバスは白でクッキリと */
+    background-color: #727272; /* キャンバスは白でクッキリと */
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* 影をさらに柔らかく */
 }
 
 /* ダメージを受けた際のフラッシュ効果 */
 .flash {
-    background-color: #ffdddd; /* 少し柔らかい赤に */
+    background-color: #450404; /* 少し柔らかい赤に */
 }
 
 @media (max-width: 768px) {

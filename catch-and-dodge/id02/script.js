@@ -18,9 +18,9 @@
  * @property {string} bomb - 爆弾の画像
  */
 const ASSET_PATHS = {
-    player: 'images/player.png',
-    apple: 'images/apple.png',
-    bomb: 'images/bomb.png',
+    player: 'images/player2.png',
+    apple: 'images/star.png',
+    bomb: 'images/beatle.png',
 };
 
 /**
@@ -35,9 +35,9 @@ const CONFIG = {
     },
     /** アイテムに関する設定 */
     item: {
-        width: 50,   // アイテムの幅
-        height: 50,  // アイテムの高さ
-        speed: 3,    // アイテムの落下速度
+        width: 100,   // アイテムの幅
+        height: 100,  // アイテムの高さ
+        speed: 10,    // アイテムの落下速度
         count: 5,    // アイテムの総数 (リンゴと爆弾)
     },
     /** ゲーム全体に関する設定 */

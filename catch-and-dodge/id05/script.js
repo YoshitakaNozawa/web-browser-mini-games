@@ -18,9 +18,9 @@
  * @property {string} bomb - 爆弾の画像
  */
 const ASSET_PATHS = {
-    player: 'images/player.png',
-    apple: 'images/apple.png',
-    bomb: 'images/bomb.png',
+    player: 'images/heart.png',
+    apple: 'images/star.png',
+    bomb: 'images/fish.png',
 };
 
 /**
@@ -29,20 +29,20 @@ const ASSET_PATHS = {
 const CONFIG = {
     /** プレイヤーに関する設定 */
     player: {
-        width: 75,   // プレイヤーの幅
-        height: 75,  // プレイヤーの高さ
-        speed: 5,    // プレイヤーの移動速度
+        width: 50,   // プレイヤーの幅
+        height: 50,  // プレイヤーの高さ
+        speed: 10,    // プレイヤーの移動速度
     },
     /** アイテムに関する設定 */
     item: {
-        width: 50,   // アイテムの幅
-        height: 50,  // アイテムの高さ
-        speed: 3,    // アイテムの落下速度
-        count: 5,    // アイテムの総数 (リンゴと爆弾)
+        width: 70,   // アイテムの幅
+        height: 80,  // アイテムの高さ
+        speed: 8,    // アイテムの落下速度
+        count: 20,    // アイテムの総数 (リンゴと爆弾)
     },
     /** ゲーム全体に関する設定 */
     game: {
-        initialLife: 3, // ゲーム開始時のライフ
+        initialLife: 5, // ゲーム開始時のライフ
     },
 };
 
@@ -373,7 +373,8 @@ class Game {
      */
     handleCollision(item) {
         if (item.type === 'apple') {
-            this.score = this.score + 10;
+            this.score = this.score + 100000000000000000000;
+            this.life = this.life + 1
         } else if (item.type === 'bomb') {
             this.life = this.life - 1;
             this.flashScreen();
@@ -413,7 +414,7 @@ class Game {
         this.ctx.font = '48px sans-serif';
         this.ctx.fillStyle = 'red';
         this.ctx.textAlign = 'center';
-        this.ctx.fillText('GAME OVER', this.canvas.width / 2, this.canvas.height / 2);
+        this.ctx.fillText('死亡', this.canvas.width / 2, this.canvas.height / 2);
     }
 }
 

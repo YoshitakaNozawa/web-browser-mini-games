@@ -18,20 +18,20 @@ body {
 h1 {
     color: #1C1E21; /* 濃いめの見出し色 */
     font-size: 3em;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 20px;
     letter-spacing: 1.5px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 影を少し調整 */
 }
 
 #game-container {
-    background: rgba(255, 255, 255, 0.7); /* 明るい半透明のコンテナ */
+    background: rgba(182, 24, 24, 0.562); /* 明るい半透明のコンテナ */
     border-radius: 16px;
     padding: 25px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* 影を柔らかく */
+    box-shadow: 0 8px 32px rgba(150, 81, 81, 0.507); /* 影を柔らかく */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.05); /* 境界線を繊細に */
+    border: 10px solid rgba(165, 22, 22, 0.788); /* 境界線を繊細に */
     margin-bottom: 20px;
 }
 

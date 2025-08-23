@@ -18,9 +18,9 @@
  * @property {string} bomb - 爆弾の画像
  */
 const ASSET_PATHS = {
-    player: 'images/player.png',
-    apple: 'images/apple.png',
-    bomb: 'images/bomb.png',
+    player: 'images/apple.png',
+    apple: 'images/player.png',
+    bomb: 'images/fish.png',
 };
 
 /**
@@ -29,20 +29,20 @@ const ASSET_PATHS = {
 const CONFIG = {
     /** プレイヤーに関する設定 */
     player: {
-        width: 75,   // プレイヤーの幅
-        height: 75,  // プレイヤーの高さ
-        speed: 5,    // プレイヤーの移動速度
+        width: 30,   // プレイヤーの幅
+        height: 30,  // プレイヤーの高さ
+        speed: 10,    // プレイヤーの移動速度
     },
     /** アイテムに関する設定 */
     item: {
         width: 50,   // アイテムの幅
         height: 50,  // アイテムの高さ
-        speed: 3,    // アイテムの落下速度
-        count: 5,    // アイテムの総数 (リンゴと爆弾)
+        speed: 5,    // アイテムの落下速度
+        count: 20,    // アイテムの総数 (リンゴと爆弾)
     },
     /** ゲーム全体に関する設定 */
     game: {
-        initialLife: 3, // ゲーム開始時のライフ
+        initialLife: 20, // ゲーム開始時のライフ
     },
 };
 

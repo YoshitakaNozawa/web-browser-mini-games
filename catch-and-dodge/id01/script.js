@@ -19,7 +19,7 @@
  */
 const ASSET_PATHS = {
     player: 'images/player.png',
-    apple: 'images/apple.png',
+    apple: 'images/star.png',
     bomb: 'images/bomb.png',
 };
 
@@ -29,20 +29,20 @@ const ASSET_PATHS = {
 const CONFIG = {
     /** プレイヤーに関する設定 */
     player: {
-        width: 75,   // プレイヤーの幅
-        height: 75,  // プレイヤーの高さ
-        speed: 5,    // プレイヤーの移動速度
+        width: 30,   // プレイヤーの幅
+        height: 35,  // プレイヤーの高さ
+        speed: 4,    // プレイヤーの移動速度
     },
     /** アイテムに関する設定 */
     item: {
-        width: 50,   // アイテムの幅
-        height: 50,  // アイテムの高さ
+        width: 40,   // アイテムの幅
+        height: 40,  // アイテムの高さ
         speed: 3,    // アイテムの落下速度
-        count: 5,    // アイテムの総数 (リンゴと爆弾)
+        count: 10,    // アイテムの総数 (リンゴと爆弾)
     },
     /** ゲーム全体に関する設定 */
     game: {
-        initialLife: 3, // ゲーム開始時のライフ
+        initialLife: 1, // ゲーム開始時のライフ
     },
 };
 
@@ -410,10 +410,10 @@ class Game {
      * ゲームオーバーメッセージをキャンバスに表示する
      */
     drawGameOver() {
-        this.ctx.font = '48px sans-serif';
-        this.ctx.fillStyle = 'red';
+        this.ctx.font = '70px sans-serif';
+        this.ctx.fillStyle = 'blue';
         this.ctx.textAlign = 'center';
-        this.ctx.fillText('GAME OVER', this.canvas.width / 2, this.canvas.height / 2);
+        this.ctx.fillText('GAMEOVER', this.canvas.width / 2, this.canvas.height / 2);
     }
 }
 

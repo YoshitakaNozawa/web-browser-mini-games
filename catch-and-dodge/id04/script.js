@@ -18,8 +18,8 @@
  * @property {string} bomb - 爆弾の画像
  */
 const ASSET_PATHS = {
-    player: 'images/player.png',
-    apple: 'images/apple.png',
+    player: 'images/fish.png',
+    apple: 'images/heart.png',
     bomb: 'images/bomb.png',
 };
 
@@ -35,9 +35,9 @@ const CONFIG = {
     },
     /** アイテムに関する設定 */
     item: {
-        width: 50,   // アイテムの幅
+        width: 60,   // アイテムの幅
         height: 50,  // アイテムの高さ
-        speed: 3,    // アイテムの落下速度
+        speed: 5,    // アイテムの落下速度
         count: 5,    // アイテムの総数 (リンゴと爆弾)
     },
     /** ゲーム全体に関する設定 */
@@ -373,7 +373,7 @@ class Game {
      */
     handleCollision(item) {
         if (item.type === 'apple') {
-            this.score = this.score + 10;
+            this.score = this.score + 15;
         } else if (item.type === 'bomb') {
             this.life = this.life - 1;
             this.flashScreen();
